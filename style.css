@@ -1,0 +1,58 @@
+#divGame {
+    display: none;
+}
+
+.tableField {
+    border-spacing: 0;
+}
+
+.statusGame {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cell {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+    user-select: none;
+}
+
+.cell[data-cellType="blank"]:hover,
+.cell[data-cellType="flag"]:hover {
+    cursor: pointer;
+}
+
+.cell[data-cellType="blank"]:hover {
+    background-color: lightblue;
+}
+
+.cell[data-cellType="number"] {
+    background-color: lightblue;
+}
+
+.cell[data-cellType="flag"] {
+    background-color: rgb(255, 196, 87);
+}
+
+.cell[data-cellType="flag"]::before {
+    content: "!";
+}
+
+.cell[data-cellType="bomb"] {
+    background-color: rgb(255, 87, 87);
+}
+
+.cell[data-cellType="bomb"]::before {
+    background-color: rgb(255, 87, 87);
+    content: "*";
+}
+
+.cell[data-cellType="savedBomb"] {
+    background-color: rgb(0, 136, 0);
+}
+
+.cell[data-cellType="savedBomb"]::before {
+    background-color: rgb(0, 136, 0);
+    content: "*";
+}
